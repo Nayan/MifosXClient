@@ -15,7 +15,8 @@ angular.module('myApp.controllers', []).
 									if (data.authenticated) {
 										// succefull login
 										//alert('authenticated ' + data.username);
-										$location.path('/clientProfile').replace();;
+										$location.path('/clientProfile').replace();
+										$scope.user.loggedin = data.authenticated;
 										//$scope.$apply();
 									}
 									else {
