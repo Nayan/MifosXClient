@@ -13,8 +13,11 @@
           <button ng-click="login(user)">Login</button>
         </form>
       </div>
-  <div ng-view>
-  </div>
+      <div ng-show="user.loggedin" ng-controller="LoginController">
+        <p>layout</p>
+      </div>  
+      <div ng-view></div>    
+      
   <script src="lib/angular/angular.js"></script>
   <script src="js/app.js"></script>
   <script src="js/services.js"></script>
