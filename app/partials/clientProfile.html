@@ -1,1 +1,10 @@
 <p>View Client</p>
+
+<div ng-controller="ClientCtrl">
+ 
+  <ul>
+    <li ng-repeat="client in clients.pageItems">
+      {{client.firstname}}
+    </li>
+  </ul>
+</div>

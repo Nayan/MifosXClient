@@ -9,7 +9,7 @@ angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives', 
     $routeProvider.when('/view2', {templateUrl: 'partials/partial2.html', controller: 'MyCtrl2'});
     $routeProvider.when('/clientProfile', {templateUrl: 'partials/clientProfile.html', controller: 'MyCtrl2'});
 
-    RestangularProvider.setBaseUrl('https://api.mongolab.com/api/1/databases/angularjs/collections');
+    RestangularProvider.setBaseUrl('https://demo.openmf.org/mifosng-provider/api/v1');
       
 
   }]);

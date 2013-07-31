@@ -17,8 +17,8 @@ angular.module('myApp.controllers', []).
 										//alert('authenticated ' + data.username);
 										$location.path('/clientProfile').replace();
 										$scope.user.loggedin = data.authenticated;
-										angular.element(document).find('#(xxx').remove();
-										//$scope.$apply();
+										$http.defaults.headers.common.Authorization = 'Basic ' + data.base64EncodedAuthenticationKey;
+										$http.defaults.headers.common['X-Mifos-Platform-TenantId'] = 'default';
 									}
 									else {
 									alert(data.username);
@@ -33,6 +33,9 @@ angular.module('myApp.controllers', []).
 
   }])
 
-  .controller('MyCtrl1', [function() {
+  .controller('ClientCtrl', function($scope , Restangular) {
 
-  }]);
+  	$scope.clients = Restangular.all('clients').getList();
+  	alert(angular.fromJson($scope.clients));
+
+  });
