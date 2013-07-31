@@ -17,6 +17,7 @@ angular.module('myApp.controllers', []).
 										//alert('authenticated ' + data.username);
 										$location.path('/clientProfile').replace();
 										$scope.user.loggedin = data.authenticated;
+										angular.element(document).find('#(xxx').remove();
 										//$scope.$apply();
 									}
 									else {
