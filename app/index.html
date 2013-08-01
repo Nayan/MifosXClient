@@ -15,6 +15,15 @@
 
   <body class="preview" id="top" data-spy="scroll" data-target=".subnav" data-offset="80">
 
+  <!-- Login Form
+    ================================================== -->
+
+  <form class="well form-search ng-pristine ng-valid">
+    <input type="text" placeholder="Email" class="input-small">
+    <input type="password" placeholder="Password" class="input-small">
+    <button class="btn" type="submit">Sign In</button>
+  </form>
+
   <!-- Navbar
     ================================================== -->
  <div class="navbar navbar-fixed-top">
@@ -29,32 +38,41 @@
        <div class="nav-collapse collapse" id="main-menu">
         <ul class="nav" id="main-menu-left">
           <li><a href="#">Home</a></li>
-          <li><a id="swatch-link" href="#">Clients</a></li>
           <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Accounts <b class="caret"></b></a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Clients<b class="caret"></b></a>
             <ul class="dropdown-menu" id="swatch-menu">
-              <li><a href="../default/">Default</a></li>
-              <li class="divider"></li>
-              <li><a href="../amelia/">Amelia</a></li>
-              <li><a href="../cerulean/">Cerulean</a></li>
-              <li><a href="../cosmo/">Cosmo</a></li>
+              <li><a href="../default/">Groups</a></li>
+              <li><a href="../amelia/">Centers</a></li>
             </ul>
           </li>
           <li class="dropdown" id="preview-menu">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Admin<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a target="_blank" href="#">Users</a></li>
+              <li><a target="_blank" href="#">Organization</a></li>
+              <li><a target="_blank" href="#">System</a></li>          
+            </ul>
+          </li>
+          <li><a id="swatch-link" href="#">Accounts</a></li>
+          <li class="dropdown" id="preview-menu">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Reports<b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li><a target="_blank" href="bootstrap.min.css">bootstrap.min.css</a></li>
-              <li><a target="_blank" href="bootstrap.css">bootstrap.css</a></li>
-              <li class="divider"></li>
-              <li><a target="_blank" href="variables.less">variables.less</a></li>
-              <li><a target="_blank" href="bootswatch.less">bootswatch.less</a></li>
+              <li><a target="_blank" href="#">All</a></li>
+              <li><a target="_blank" href="#">Clients</a></li>
+              <li><a target="_blank" href="#">Loans</a></li>
+              <li><a target="_blank" href="#">Funds</a></li>
+              <li><a target="_blank" href="#">Accounting</a></li>
             </ul>
           </li>
         </ul>
         <ul class="nav pull-right" id="main-menu-right">
-          <li><a rel="tooltip" target="_blank" href="http://builtwithbootstrap.com/" title="Showcase of Bootstrap sites &amp; apps" onclick="_gaq.push(['_trackEvent', 'click', 'outbound', 'builtwithbootstrap']);">Built With Bootstrap <i class="icon-share-alt"></i></a></li>
-          <li><a rel="tooltip" target="_blank" href="https://wrapbootstrap.com/?ref=bsw" title="Marketplace for premium Bootstrap templates" onclick="_gaq.push(['_trackEvent', 'click', 'outbound', 'wrapbootstrap']);">WrapBootstrap <i class="icon-share-alt"></i></a></li>
+          <li><a rel="tooltip" href="#" title="Select lang" >Culture</a></li>
+          <li><a rel="tooltip" href="#" title="Login User" >Mifos</a></li>
+          <li><a rel="tooltip" href="#" title="Login out" >Sign out</a></li>          
         </ul>
+        <form action="" class="navbar-search pull-right ng-pristine ng-valid">
+            <input type="text" placeholder="Search" class="search-query span2">
+        </form>
        </div>
      </div>
    </div>
