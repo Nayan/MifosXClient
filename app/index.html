@@ -80,9 +80,28 @@
   </div>
 
  <div class="container">
-
-    <div ng-view></div>
-
+ <div class="row-fluid">
+    <div class="span3">
+      <div class="well sidebar-nav">
+          <ul class="nav nav-list">
+              <li class="nav-header">Sidebar</li>
+              <li class="active"><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li class="nav-header">Sidebar</li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li class="nav-header">Sidebar</li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+            </ul>
+      </div>    
+    </div>
+    <div class="span9">
+        <div ng-view></div>
+    </div>  
      <!-- Footer
       ================================================== -->
       <hr>
@@ -92,7 +111,8 @@
         Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a>.<br/>
         Based on <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>.
       </footer>
-
+ 
+ </div>
  </div><!-- /container -->
 
     <!-- Le javascript
