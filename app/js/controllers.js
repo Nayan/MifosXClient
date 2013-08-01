@@ -34,8 +34,5 @@ angular.module('myApp.controllers', []).
   }])
 
   .controller('ClientCtrl', function($scope , Restangular) {
-
   	$scope.clients = Restangular.all('clients').getList();
-  	alert(angular.fromJson($scope.clients));
-
   });

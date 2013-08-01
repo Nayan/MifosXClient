@@ -10,6 +10,5 @@ angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives', 
     $routeProvider.when('/clientProfile', {templateUrl: 'partials/clientProfile.html', controller: 'MyCtrl2'});
 
     RestangularProvider.setBaseUrl('https://demo.openmf.org/mifosng-provider/api/v1');
-      
 
   }]);
