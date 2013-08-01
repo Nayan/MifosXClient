@@ -32,8 +32,9 @@
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Clients<b class="caret"></b></a>
             <ul class="dropdown-menu" id="swatch-menu">
-              <li><a href="../default/">Groups</a></li>
-              <li><a href="../amelia/">Centers</a></li>
+              <li><a href="#/clients">Clients</a></li>
+              <li><a href="#">Groups</a></li>
+              <li><a href="#">Centers</a></li>
             </ul>
           </li>
           <li class="dropdown" id="preview-menu">
@@ -80,42 +81,33 @@
   </div>
 
  <div class="container">
- <div class="row-fluid">
-    <div class="span3">
-      <div class="well sidebar-nav">
-          <div>Quick start</div>
-          <ul class="nav nav-list">
-              <li class="nav-header">Manage Clients</li>
-              <li><a href="#">Create new Center</a></li>
-              <li><a href="#">Create new Group</a></li>
-              <li><a href="#">Create new Client</a></li>
-              <li class="nav-header">Manage Accounts</li>
-              <li><a href="#">Open new Loan Account</a></li>
-              <li><a href="#">Open new Savings Account</a></li>
-              <li><a href="#">Enter Collection Sheet Data</a></li>
-            </ul>
-      </div>    
-    </div>
-    <div class="span9">
-        <div ng-view></div>
-    </div>  
-     <!-- Footer
-      ================================================== -->
+   <div class="row-fluid">
+      <div class="span3 well sidebar-nav">
+            <div>Quick start</div>
+            <ul class="nav nav-list">
+                <li class="nav-header">Manage Clients</li>
+                <li><a href="#">Create new Center</a></li>
+                <li><a href="#">Create new Group</a></li>
+                <li><a href="#">Create new Client</a></li>
+                <li class="nav-header">Manage Accounts</li>
+                <li><a href="#">Open new Loan Account</a></li>
+                <li><a href="#">Open new Savings Account</a></li>
+                <li><a href="#">Enter Collection Sheet Data</a></li>
+              </ul>
+      </div>
+      <div class="span9">
+          <div ng-view></div>
+      </div>  
+       <!-- Footer
+        ================================================== -->
       <hr>
-
-      <footer id="footer">
-        Made by <a href="https://github.com/Nayan">Nayan Ambali</a>. Contact him <a href="mailto:nayan.ambali@gmail.com">nayan.ambali@gmail.com</a>.<br/>
-        Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a>.<br/>
-        Based on <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>.
-      </footer>
- 
- </div>
+   </div>
  </div><!-- /container -->
 
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-  <script src="js/bootswatch.js"></script>
+  
   <script src="lib/angular/angular.js"></script>
   <script src="js/app.js"></script>
   <script src="js/services.js"></script>

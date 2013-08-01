@@ -15,7 +15,7 @@ angular.module('myApp.controllers', []).
 									if (data.authenticated) {
 										// succefull login
 										//alert('authenticated ' + data.username);
-										$location.path('/clientProfile').replace();
+										$location.path('/home');
 										$scope.user.loggedin = data.authenticated;
 										$http.defaults.headers.common.Authorization = 'Basic ' + data.base64EncodedAuthenticationKey;
 										$http.defaults.headers.common['X-Mifos-Platform-TenantId'] = 'default';
@@ -29,10 +29,10 @@ angular.module('myApp.controllers', []).
 					  };
 				}
 			])
-  .controller('MyCtrl2', [function() {
+  .controller('HomeCtrl', [function() {
 
   }])
 
   .controller('ClientCtrl', function($scope , Restangular) {
-  	$scope.clients = Restangular.all('clients').getList();
+  	  $scope.clients = Restangular.all('clients').getList();
   });

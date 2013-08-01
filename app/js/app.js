@@ -6,8 +6,8 @@ angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives', 
   config(['$routeProvider','RestangularProvider', function($routeProvider , RestangularProvider) {
     
     $routeProvider.when('/view1', {templateUrl: 'partials/partial1.html', controller: 'MyCtrl1'});
-    $routeProvider.when('/view2', {templateUrl: 'partials/partial2.html', controller: 'MyCtrl2'});
-    $routeProvider.when('/clientProfile', {templateUrl: 'partials/clientProfile.html', controller: 'MyCtrl2'});
+    $routeProvider.when('/clients', {templateUrl: 'partials/clients.html', controller: 'ClientCtrl'});
+    $routeProvider.when('/home', {templateUrl: 'partials/home.html', controller: 'HomeCtrl'});
 
     RestangularProvider.setBaseUrl('https://demo.openmf.org/mifosng-provider/api/v1');
 
