@@ -32,7 +32,28 @@ angular.module('myApp.controllers', []).
   .controller('HomeCtrl', [function() {
 
   }])
+  .controller('ClientCtrl', function($scope , $http , Restangular , Paginator) {
+	  	//$scope.clients = Restangular.all('clients').getList();
 
-  .controller('ClientCtrl', function($scope , Restangular) {
-  	  $scope.clients = Restangular.all('clients').getList();
-  });
+  	  	$scope.query = 'Testing';
+		var fetchFunction = function(offset, limit, callback) {
+				$http.get('https://demo.openmf.org/mifosng-provider/api/v1/clients',
+				{params: {offset: offset, limit: limit}})
+				.success(callback);
+				};
+		$scope.searchPaginator = Paginator(fetchFunction, 10);
+  })
+  .controller('CreateClientCtrl', function($scope , $http) {
+				$http.get('https://demo.openmf.org/mifosng-provider/api/v1/clients/template',
+				{params: {}})
+				.success(function(data){
+					$scope.offices = data.officeOptions;
+					$scope.staffs = data.staffOptions;
+				});
+
+				$scope.updateStaffs = function() {
+					alert("ter");
+					$scope.staffs={};
+				};
+  })
+  ;

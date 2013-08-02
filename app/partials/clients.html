@@ -1,6 +1,6 @@
 <div class="row alert-block span" >
 	<div class="span4">
-		<a href="#" class="btn btn-primary"><i class="icon-plus icon-white"></i> Create Client</a>
+		<a href="#/createclient" class="btn btn-primary"><i class="icon-plus icon-white"></i> Create Client</a>
 	</div>
 	<div class="span8">
 		<form class="form-search">
@@ -9,10 +9,25 @@
 		</form>
 	</div>
 </div>
-<div ng-controller="ClientCtrl">
-  <ul>
-    <li ng-repeat="client in clients.pageItems">
-      {{client.firstname}}
-    </li>
-  </ul>
+<div class="row alert-block span" ng-controller="ClientCtrl">
+	<table class="table table-bordered" ui:sortable ng:model="people">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in searchPaginator.currentPageItems">
+                <td>{{item.accountNo}}</td>
+                <td>{{item.firstname}}</td>
+            </tr>
+            <tr>
+            	<td span="2">
+            		<a href="" ng-click="searchPaginator.previous()" ng-show="searchPaginator.hasPrevious()">&lt;&lt; Prev</a>
+					<a href="" ng-click="searchPaginator.next()" ng-show="searchPaginator.hasNext()">Next &gt;&gt;</a>
+            	</td>
+            </tr>
+        </tbody>
+    </table>
 </div>

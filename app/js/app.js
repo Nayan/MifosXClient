@@ -8,7 +8,7 @@ angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives', 
     $routeProvider.when('/view1', {templateUrl: 'partials/partial1.html', controller: 'MyCtrl1'});
     $routeProvider.when('/clients', {templateUrl: 'partials/clients.html', controller: 'ClientCtrl'});
     $routeProvider.when('/home', {templateUrl: 'partials/home.html', controller: 'HomeCtrl'});
-
+    $routeProvider.when('/createclient', {templateUrl: 'partials/createClient.html', controller: 'CreateClientCtrl'});
     RestangularProvider.setBaseUrl('https://demo.openmf.org/mifosng-provider/api/v1');
 
   }]);
