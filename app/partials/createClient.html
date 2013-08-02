@@ -1,45 +1,45 @@
-      <form class="form-horizontal well" ng-controller="CreateClientCtrl">
+      <form class="form-horizontal well" ng-controller="CreateClientCtrl" ng-submit="submit()">
         <fieldset>
           <legend>Create Client</legend>
           <div class="control-group info">
             <label class="control-label" for="office">Office</label>
             <div class="controls">
-              <select id="office">
-                <option ng-repeat="office in offices">{{office.name}}</option>
+              <select id="office" ng-model="formData.officeId">
+                <option ng-repeat="office in offices" value="{{office.id}}">{{office.name}}</option>
               </select>
             </div>
           </div>
           <div class="control-group info">
             <label class="control-label" for="loanofficer">Loan Officer</label>
             <div class="controls">
-              <select id="loanofficer">
-                <option ng-repeat="staff in staffs">{{staff.displayName}}</option>
+              <select id="loanofficer" ng-model="formData.staffId">
+                <option ng-repeat="staff in staffs" value="{{staff.id}}">{{staff.displayName}}</option>
               </select>
             </div>
           </div>
 		  <div class="control-group">
             <label class="control-label" for="firstname">First Name</label>
             <div class="controls">
-              <input type="text" class="input-xlarge" id="firstname" name="firstname">
+              <input type="text" class="input-xlarge" id="firstname" ng-model="formData.firstname">
             </div>
           </div>
           <div class="control-group">
             <label class="control-label" for="middlename">Middle Name</label>
             <div class="controls">
-              <input type="text" class="input-xlarge" id="middlename" name="middlename">
+              <input type="text" class="input-xlarge" id="middlename" ng-model="formData.middlename">
             </div>
           </div>
           <div class="control-group">
             <label class="control-label" for="lastname">Last Name</label>
             <div class="controls">
-              <input type="text" class="input-xlarge" id="lastname" name="lastname">
+              <input type="text" class="input-xlarge" id="lastname" ng-model="formData.lastname">
             </div>
           </div>
           <div class="control-group">
             <label class="control-label" for="active">Active</label>
             <div class="controls">
               <label class="checkbox">
-                <input type="checkbox" id="active" >
+                <input type="checkbox" id="active" value="false" ng-model="formData.active">
               </label>
             </div>
           </div>
