@@ -56,6 +56,9 @@ angular.module('myApp.controllers', []).
 				};
 
 				$scope.submit = function() {   
+          			this.formData.locale = 'en';
+          			this.formData.dateFormat = 'dd MMMM yyyy';
+          			this.formData.active = 'false';
 					console.log(this.formData);
 					var baseClients = Restangular.all('clients');
 					baseClients.post(this.formData);
