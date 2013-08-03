@@ -1,48 +1,44 @@
 'use strict';
 
 /* Services */
-
-
-// Demonstrate how to register services
-// In this case it is a simple value service.
 angular.module('myApp.services', []).factory('Paginator', function() {
-// Despite being a factory, the user of the service gets a new
-// Paginator every time he calls the service. This is because
-// we return a function that provides an object when executed
-return function(fetchFunction, pageSize) {
-var paginator = {
-hasNextVar: false,
-next: function() {
-if (this.hasNextVar) {
-this.currentOffset += pageSize;
-this._load();
-}
-},
-_load: function() {
-var self = this;
-fetchFunction(this.currentOffset, pageSize + 1, function(items) {
-self.currentPageItems = items.pageItems;
-self.hasNextVar = items.pageItems.length === pageSize + 1;;
+				// Despite being a factory, the user of the service gets a new
+				// Paginator every time he calls the service. This is because
+				// we return a function that provides an object when executed
+				return function(fetchFunction, pageSize) {
+				var paginator = {
+				hasNextVar: false,
+				next: function() {
+				if (this.hasNextVar) {
+				this.currentOffset += pageSize;
+				this._load();
+				}
+				},
+				_load: function() {
+				var self = this;
+				fetchFunction(this.currentOffset, pageSize + 1, function(items) {
+				self.currentPageItems = items.pageItems;
+				self.hasNextVar = items.pageItems.length === pageSize + 1;;
 
-});
-},
-hasNext: function() {
-return this.hasNextVar;
-},
-previous: function() {
-if(this.hasPrevious()) {
-this.currentOffset -= pageSize;
-this._load();
-}
-},
-hasPrevious: function() {
-return this.currentOffset !== 0;
-},
-currentPageItems: [],
-currentOffset: 0
-};
-// Load the first page
-paginator._load();
-return paginator;
-};
-});
+				});
+				},
+				hasNext: function() {
+				return this.hasNextVar;
+				},
+				previous: function() {
+				if(this.hasPrevious()) {
+				this.currentOffset -= pageSize;
+				this._load();
+				}
+				},
+				hasPrevious: function() {
+				return this.currentOffset !== 0;
+				},
+				currentPageItems: [],
+				currentOffset: 0
+				};
+				// Load the first page
+				paginator._load();
+				return paginator;
+				};
+		});
