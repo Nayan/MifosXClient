@@ -28,8 +28,7 @@ angular.module('myApp.controllers', []).
   .controller('HomeCtrl', [function() {
 
   }])
-  .controller('ClientCtrl', function($scope , $http , Restangular , Paginator) {
-	  	//$scope.clients = Restangular.all('clients').getList();
+  .controller('ClientCtrl', function($scope , $http , Paginator) {
 
   	  	$scope.query = 'Testing';
 		var fetchFunction = function(offset, limit, callback) {
@@ -54,8 +53,10 @@ angular.module('myApp.controllers', []).
           			this.formData.locale = 'en';
           			this.formData.dateFormat = 'dd MMMM yyyy';
           			this.formData.active = 'false';
-					Clients.save(this.formData,function(data){alert("Testing");});
-					$location.path('/clients');
+					Clients.save(this.formData,function(data){
+						$location.path('/clients');
+					});
+					
     			};
 
   })
