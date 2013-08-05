@@ -1,12 +1,21 @@
 <div>
-  <div class="row">
-    <div class="pull-right">buttons</div>
+  <div class="row paddedtop">
+    <div class="pull-right">
+      <div class="btn-group">
+          <a href="#" class="btn btn-primary"><i class="icon-edit icon-white"></i> Edit</a>
+          <a href="#" class="btn btn-primary"><i class="icon-plus icon-white"></i> New Loan</a>
+          <a href="#" class="btn btn-primary"><i class="icon-list-ul icon-white"></i> Add Note</a>
+          <a href="#" class="btn btn-primary"><i class="icon-trash icon-white"></i> Close</a>
+      </div>
+    </div>
   </div>
   <div class="row">
-    <div class="paddedleft"><h3>{{client.displayName}}</h3>{{client.status.value}}</div>
+    <div class="paddedleft"><span class="pull-left"><h3>{{client.displayName}}</h3></span>&nbsp;&nbsp;&nbsp;<span class="pull-left badge badge-warning">{{client.status.value}}</span></div>
   </div>
   <div class="row paddedleft">
-    <div class="span3">Photo</div>
+    <div class="span3">
+      <img src="../app/img/blank_avatar.jpg" alt="Avatar" width="100">
+    </div>
     <div class="span5">
         <strong>System Id:&nbsp;</strong> {{client.accountNo}} <br>
         <strong>Loan Officer:&nbsp;</strong> {{client.staffName}} <br>

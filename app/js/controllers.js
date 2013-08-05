@@ -60,9 +60,7 @@ angular.module('myApp.controllers', []).
 
   })
     .controller('ViewClientCtrl', function($scope , $routeParams , Clients) {
-		
-		$scope.client = Clients.get({id: $routeParams.id});		
-
+		   $scope.client = Clients.get({id: $routeParams.id});		
   })
 
   ;
