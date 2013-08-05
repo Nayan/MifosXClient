@@ -49,5 +49,5 @@ angular.module('myApp.services', [])
 	})
 	.factory('Clients', function($resource)
 	{
-    	return $resource('https://demo.openmf.org/mifosng-provider/api/v1/clients');
+    	return $resource('https://demo.openmf.org/mifosng-provider/api/v1/clients/:id',{ id: '@id' });
 	});

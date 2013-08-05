@@ -54,7 +54,7 @@ angular.module('myApp.controllers', []).
           			this.formData.dateFormat = 'dd MMMM yyyy';
           			this.formData.active = 'false';
 					Clients.save(this.formData,function(data){
-						$location.path('/clients');
+						$location.path('/viewclient/123');
 					});
 					
     			};
