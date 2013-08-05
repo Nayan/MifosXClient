@@ -37,7 +37,7 @@ angular.module('myApp.controllers', []).
 				{params: {offset: offset, limit: limit}})
 				.success(callback);
 				};
-		$scope.searchPaginator = Paginator(fetchFunction, 10);
+		$scope.searchPaginator = Paginator(fetchFunction, 4);
   })
   .controller('CreateClientCtrl', function($scope , $http , $location , Restangular) {
 				

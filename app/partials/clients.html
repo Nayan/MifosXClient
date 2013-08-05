@@ -22,12 +22,11 @@
                 <td>{{item.accountNo}}</td>
                 <td>{{item.firstname}}</td>
             </tr>
-            <tr>
-            	<td span="2">
-            		<a href="" ng-click="searchPaginator.previous()" ng-show="searchPaginator.hasPrevious()">&lt;&lt; Prev</a>
-					<a href="" ng-click="searchPaginator.next()" ng-show="searchPaginator.hasNext()">Next &gt;&gt;</a>
-            	</td>
-            </tr>
         </tbody>
     </table>
+    <ul class="pager">
+        <li class="previous"><a ng-click="searchPaginator.previous()" href="" ng-disabled="!searchPaginator.hasPrevious()">&larr; Prev</a></li>
+        <li class="next" ><a ng-click="searchPaginator.next()" href="" ng-disabled="!searchPaginator.hasNext()">Next &rarr;</a></li>
+    </ul>
+
 </div>
