@@ -9,7 +9,7 @@ angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives', 
 
     $routeProvider.when('/clients', {templateUrl: 'partials/clients.html', controller: 'ClientCtrl'});
     $routeProvider.when('/createclient', {templateUrl: 'partials/createClient.html', controller: 'CreateClientCtrl'});
-    $routeProvider.when('/viewclient/*', {templateUrl: 'partials/viewClient.html', controller: 'ViewClientCtrl'});
+    $routeProvider.when('/viewclient/:id', {templateUrl: 'partials/viewClient.html', controller: 'ViewClientCtrl'});
 
     $httpProvider.defaults.headers.common['X-Mifos-Platform-TenantId'] = 'default';
     $httpProvider.defaults.headers.common['Content-Type'] = 'application/json; charset=utf-8';

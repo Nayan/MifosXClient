@@ -54,10 +54,15 @@ angular.module('myApp.controllers', []).
           			this.formData.dateFormat = 'dd MMMM yyyy';
           			this.formData.active = 'false';
 					Clients.save(this.formData,function(data){
-						$location.path('/viewclient/123');
+						$location.path('/viewclient/' + data.clientId);
 					});
-					
     			};
 
   })
+    .controller('ViewClientCtrl', function($scope , $routeParams , Clients) {
+		
+		Clients.get({id: $routeParams.id});		
+
+  })
+
   ;
