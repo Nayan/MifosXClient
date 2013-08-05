@@ -3,12 +3,15 @@
     <div class="pull-right">buttons</div>
   </div>
   <div class="row">
-    <div class="paddedleft"><h3>New Cloainft</h3></div>
+    <div class="paddedleft"><h3>{{client.displayName}}</h3>{{client.status.value}}</div>
   </div>
-  <div class="row">
-    <div class="span3">...</div>
-    <div class="span5">...</div>
+  <div class="row paddedleft">
+    <div class="span3">Photo</div>
+    <div class="span5">
+        <strong>System Id:&nbsp;</strong> {{client.accountNo}} <br>
+        <strong>Loan Officer:&nbsp;</strong> {{client.staffName}} <br>
+    </div>
   </div>
-  <div class="row">
+  <div class="row paddedleft">
   </div>
 </div>
