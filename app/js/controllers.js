@@ -7,18 +7,14 @@ angular.module('myApp.controllers', []).
 					  $scope.login = function(User) {
 					  		
 					  			var params = {'password':User.password ,'username':User.name};
-					  			var headers = {'X-Mifos-Platform-TenantId':'default','Content-Type':'application/json; charset=utf-8'};
-								var config = { 'method': 'POST', 'url': 'https://demo.openmf.org/mifosng-provider/api/v1/authentication', 'params': params ,'headers':headers};
+					  			var config = { 'method': 'POST', 'url': 'https://demo.openmf.org/mifosng-provider/api/v1/authentication', 'params': params};
 								// configuration object
 								$http(config)
 								.success(function(data, status, headers, config) {
 									if (data.authenticated) {
-										// succefull login
-										//alert('authenticated ' + data.username);
 										$location.path('/home');
 										$scope.user.loggedin = data.authenticated;
 										$http.defaults.headers.common.Authorization = 'Basic ' + data.base64EncodedAuthenticationKey;
-										$http.defaults.headers.common['X-Mifos-Platform-TenantId'] = 'default';
 									}
 									else {
 									alert(data.username);
@@ -44,6 +40,7 @@ angular.module('myApp.controllers', []).
 		$scope.searchPaginator = Paginator(fetchFunction, 10);
   })
   .controller('CreateClientCtrl', function($scope , $http , $location , Restangular) {
+				
 				$http.get('https://demo.openmf.org/mifosng-provider/api/v1/clients/template',
 				{params: {}})
 				.success(function(data){
