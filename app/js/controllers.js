@@ -39,11 +39,9 @@ angular.module('myApp.controllers', []).
 				};
 		$scope.searchPaginator = Paginator(fetchFunction, 4);
   })
-  .controller('CreateClientCtrl', function($scope , $http , $location , Restangular) {
+  .controller('CreateClientCtrl', function($scope , $http , $location , ClientTemplate , Clients) {
 				
-				$http.get('https://demo.openmf.org/mifosng-provider/api/v1/clients/template',
-				{params: {}})
-				.success(function(data){
+				ClientTemplate.get(function(data){
 					$scope.offices = data.officeOptions;
 					$scope.staffs = data.staffOptions;
 				});
@@ -56,10 +54,7 @@ angular.module('myApp.controllers', []).
           			this.formData.locale = 'en';
           			this.formData.dateFormat = 'dd MMMM yyyy';
           			this.formData.active = 'false';
-					console.log(this.formData);
-					var baseClients = Restangular.all('clients');
-					baseClients.post(this.formData);
-
+					Clients.save(this.formData,function(data){alert("Testing");});
 					$location.path('/clients');
     			};
 

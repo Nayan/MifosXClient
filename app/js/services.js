@@ -1,7 +1,8 @@
 'use strict';
 
 /* Services */
-angular.module('myApp.services', []).factory('Paginator', function() {
+angular.module('myApp.services', [])
+	.factory('Paginator', function() {
 				// Despite being a factory, the user of the service gets a new
 				// Paginator every time he calls the service. This is because
 				// we return a function that provides an object when executed
@@ -41,4 +42,12 @@ angular.module('myApp.services', []).factory('Paginator', function() {
 				paginator._load();
 				return paginator;
 				};
-		});
+	})
+	.factory('ClientTemplate', function($resource)
+	{
+    	return $resource('https://demo.openmf.org/mifosng-provider/api/v1/clients/template');
+	})
+	.factory('Clients', function($resource)
+	{
+    	return $resource('https://demo.openmf.org/mifosng-provider/api/v1/clients');
+	});
