@@ -105,9 +105,10 @@
  <div class="container">
    <div class="row-fluid">
       <div class="span3 well sidebar-nav">
-        <div class="control-group">
-            <input type="text" ng-model="search.query" placeholder="Search" class="input-small control">
-            <a href="#/search/{{search.query}}" class="btn btn-primary control"><i class="icon-search icon-white"></i></a>
+        
+        <div class="input-append">
+          <input type="text" ng-model="search.query" class="form-control input-small" placeholder="Search">
+          <span class="input-group-addon"><a href="#/search/{{search.query}}" class="btn btn-primary control"><i class="icon-search icon-white"></i></a></span>
         </div>
         <accordion close-others="true">
           <accordion-group is-open="acc1open">
