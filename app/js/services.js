@@ -50,4 +50,17 @@ angular.module('myApp.services', [])
 	.factory('Clients', function($resource)
 	{
     	return $resource('https://demo.openmf.org/mifosng-provider/api/v1/clients/:id',{ id: '@id' });
+	})
+	.factory('GlobalSearch', function($resource)
+	{
+    	return $resource('https://demo.openmf.org/mifosng-provider/api/v1/search',{query:'@query'}, { 
+		        search: {
+				            method: 'GET',
+				            params: {
+				            		    query: '@query'
+						            } ,
+						    isArray:true
+		    		    }
+		    	}); 
 	});
+	;
