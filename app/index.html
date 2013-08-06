@@ -99,33 +99,48 @@
    <div class="row-fluid">
       <div class="span3 well sidebar-nav">
         <div>
-          <form class="navbar-search pull-left" action="">
-            <input type="text" placeholder="Search" style="width:90%"/>
-          </form>
+          <input type="text" placeholder="Search" style="width:90%"/>
         </div>
-            <ul class="nav nav-list">
-                <li class="nav-header">Transactions</li>
-                  <li><a href="#">Collection Sheet</a></li>
-                  <li><a href="#">Loan Repayment</a></li>
-                  <li><a href="#">Loan Disbursement</a></li>
-                  <li >Savings Deposit</li>
-                  <li><a href="#">Savings Withdrawal</a></li>
-                  <li></li>
-                  <li class="nav-header">Navigate</a></li>
-                  <li><a href="#">Centers | Groups</a></li>
-                  <li><a href="#">Branches</a></li>
-                  <li><a href="#">Clients</a></li>
-                  <li><a href="#">Loans | Savings</a></li>
-                  <li><a href="#">Transactions</a></li>
-                  <li><a href="#">Loans | Savings | Others</a></li>
-                  <li></li>
-                  <li class="nav-header">New</a></li>
-                  <li><a href="#">Client | multiple</a></li>
-                  <li><a href="#">Loan | multiple</a></li>
-                  <li><a href="#">Savings | multiple</a></li>
-                  <li><a href="#">Center</a></li>
-                  <li><a href="#">Group</a></li>
-              </ul>
+        <accordion close-others="true">
+          <accordion-group is-open="acc1open">
+            <accordion-heading>
+                TRANSACTION
+            </accordion-heading>
+              <ul class="nav nav-list">
+                <li><a href="#">Collection Sheet</a></li>
+                <li><a href="#">Loan Repayment</a></li>
+                <li><a href="#">Loan Disbursement</a></li>
+                <li ><a href="#">Savings Deposit</a></li>
+                <li><a href="#">Savings Withdrawal</a></li>
+              </ul>  
+          </accordion-group>
+          <accordion-group is-open="acc2open">
+            <accordion-heading>
+                NAVIGATE
+            </accordion-heading>
+              <ul class="nav nav-list">
+                <li><a href="#">Centers | Groups</a></li>
+                <li><a href="#">Branches</a></li>
+                <li><a href="#">Clients</a></li>
+                <li><a href="#">Loans | Savings</a></li>
+                <li><a href="#">Transactions</a></li>
+                <li><a href="#">Loans | Savings | Others</a></li>
+              </ul>  
+          </accordion-group> 
+          <accordion-group is-open="acc3open">
+            <accordion-heading>
+                NEW
+            </accordion-heading>
+              <ul class="nav nav-list">
+                <li><a href="#">Client | multiple</a></li>
+                <li><a href="#">Loan | multiple</a></li>
+                <li><a href="#">Savings | multiple</a></li>
+                <li><a href="#">Center</a></li>
+                <li><a href="#">Group</a></li>
+              </ul>   
+          </accordion-group> 
+        </accordion>
+        </div>
       </div>
       <div class="span9">
           <div ng-view></div>
@@ -150,5 +165,6 @@
   <script src="js/directives.js"></script>
   <script src="lib/angularui/ui-bootstrap-0.4.0.js"></script>
   <script src="lib/restangular/underscore-min.js"></script>
+  <script src="lib/angularui/ui-bootstrap-tpls-0.5.0.js"></script>
   </body>
 </html>
