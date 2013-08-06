@@ -20,6 +20,9 @@ td > a {
     color: #080808;
 }
 
+.condensed-table th, .condensed-table td {
+  padding:5px 5px 4px;
+}
 accordion > div > div > div > a {
 	color : #5e565e;
 }

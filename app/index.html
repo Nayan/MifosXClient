@@ -29,7 +29,7 @@
        <div class="nav-collapse collapse" id="main-menu">
         <ul class="nav" id="main-menu-left">
           <li><a href="#"><i class="icon-home icon-white"></i>Home</a></li>
-          <li><a href="#"><i class="icon-bell-alt"></i>Pending Tasks</a></li>
+          <li><a href="#"><i class="icon-bell-alt"></i>Tasks</a></li>
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-group"></i>Clients<b class="caret"></b></a>
             <ul class="dropdown-menu" id="swatch-menu">
@@ -61,9 +61,9 @@
           <li class="dropdown" id="preview-menu">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-wrench"></i>Admin<b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li><a target="_blank" href="#">Users</a></li>
-              <li><a target="_blank" href="#">Organization</a></li>
-              <li><a target="_blank" href="#">System</a></li>          
+              <li><a href="#">Users</a></li>
+              <li><a href="#">Organization</a></li>
+              <li><a href="#">System</a></li>          
             </ul>
           </li>
           
@@ -73,7 +73,14 @@
           <li><a rel="tooltip" href="#" title="Select lang" >Culture</a></li>
           <li><a rel="tooltip" href="#" title="Login User" >Mifos</a></li>
           -->
-          <li><a rel="tooltip" href="#" title="Login out" >Sign out</a></li>          
+        <li class="dropdown" id="preview-menu">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">John Smith<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#"><i class="icon-user"></i>Profile</a></li>
+              <li><a href="#"><i class="icon-cog"></i>Setting</a></li>
+              <li><a href="#"><i class="icon-off"></i>Logout</a></li>          
+            </ul>
+          </li>
         </ul>
         <!--
         <form action="" class="navbar-search pull-right ng-pristine ng-valid">
@@ -129,7 +136,7 @@
           </accordion-group> 
           <accordion-group is-open="acc3open">
             <accordion-heading>
-                NEW
+                CREATE NEW
             </accordion-heading>
               <ul class="nav nav-list">
                 <li><a href="#">Client | multiple</a></li>
