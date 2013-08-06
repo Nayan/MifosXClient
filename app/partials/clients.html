@@ -10,7 +10,7 @@
 	</div>
 </div>
 <div class="row alert-block span" ng-controller="ClientCtrl">
-	<table class="table table-bordered" ui:sortable ng:model="people">
+	<table class="table condensed-table" ui:sortable>
         <thead>
             <tr>
                 <th>Name</th>
@@ -21,8 +21,8 @@
         </thead>
         <tbody>
             <tr ng-repeat="client in searchPaginator.currentPageItems">
-                <td>{{client.displayName}}</td>
-                <td>{{client.accountNo}}</td> 
+                <td><a href="#/viewclient/{{client.id}}">{{client.displayName}}</a></td>
+                <td><a href="#/viewclient/{{client.id}}">{{client.accountNo}}</a></td> 
                 <td>{{client.officeName}}</td>
                 <td>{{client.staffName}}</td>
             </tr>
