@@ -62,5 +62,17 @@ angular.module('myApp.services', [])
 						    isArray:true
 		    		    }
 		    	}); 
+	})
+	.factory('ClientAccounts', function($resource)
+	{
+    	return $resource('https://demo.openmf.org/mifosng-provider/api/v1/clients/:id/accounts',{ id: '@id' });
+	})
+	.factory('ClientNotes', function($resource)
+	{
+		return $resource('https://demo.openmf.org/mifosng-provider/api/v1/clients/:id/notes',{ id: '@id' }, { 
+		   search: {
+			   method: 'GET',
+			   isArray:true
+		   }
+		}); 
 	});
-	;
