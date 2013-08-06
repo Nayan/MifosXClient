@@ -1,14 +1,10 @@
 <div class="row alert-block span" >
-	<div class="span4">
-		<a href="#/createclient" class="btn btn-primary"><i class="icon-plus icon-white"></i> Create Client</a>
-	</div>
-	<div class="span8">
-		<form class="form-search">
-			<input type="text" placeholder="Clients">
-	        <button class="btn" type="submit">Search</button>
-		</form>
-	</div>
+    <input ng-model="filterText" type="text" class="form-control" placeholder="Filter by name/acct#/staff/office">
+    <div class="span4 pull-right">
+        <a href="#/createclient" class="btn btn-primary"><i class="icon-plus icon-white"></i> Create Client</a>
+    </div>
 </div>
+
 <div class="row alert-block span" ng-controller="ClientCtrl">
 	<table class="table" ui:sortable>
         <thead>
@@ -20,7 +16,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="client in searchPaginator.currentPageItems">
+            <tr ng-repeat="client in searchPaginator.currentPageItems  | filter:filterText">
                 <td><a href="#/viewclient/{{client.id}}">{{client.displayName}}</a></td>
                 <td><a href="#/viewclient/{{client.id}}">{{client.accountNo}}</a></td> 
                 <td>{{client.officeName}}</td>
