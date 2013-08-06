@@ -19,3 +19,13 @@ padding-top: 10px;
 td > a {
     color: #080808;
 }
+
+accordion > div > div > div > a {
+	color : #5e565e;
+}
+
+accordion > div > div > div > a:hover,
+accordion > div > div > div > a:focus {
+  color: #080808;
+  text-decoration: underline;
+}
