@@ -13,14 +13,18 @@
 	<table class="table table-bordered" ui:sortable ng:model="people">
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Name</th>
+                <th>Account #</th>
+                <th>Staff</th>
+                <th>Office</th>
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="item in searchPaginator.currentPageItems">
-                <td>{{item.accountNo}}</td>
-                <td>{{item.firstname}}</td>
+            <tr ng-repeat="client in searchPaginator.currentPageItems">
+                <td>{{client.displayName}}</td>
+                <td>{{client.accountNo}}</td> 
+                <td>{{client.officeName}}</td>
+                <td>{{client.staffName}}</td>
             </tr>
         </tbody>
     </table>
