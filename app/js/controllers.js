@@ -59,9 +59,11 @@ angular.module('myApp.controllers', []).
     			};
 
   })
-    .controller('ViewClientCtrl', function($scope , $routeParams , Clients) {
-		   $scope.client = Clients.get({id: $routeParams.id});		
-  })
     .controller('SearchCtrl', function($scope , $routeParams , GlobalSearch) {
 		   $scope.searchResults = GlobalSearch.search({query: $routeParams.query});
+	})
+    .controller('ViewClientCtrl', function($scope , $routeParams , Clients , ClientAccounts, ClientNotes) {
+		   $scope.client = Clients.get({id: $routeParams.id});
+		   $scope.clientAccounts = ClientAccounts.get({id: $routeParams.id});
+		   $scope.clientNotes = ClientNotes.search({id: $routeParams.id});		
   });
