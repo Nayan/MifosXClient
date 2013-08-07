@@ -17,8 +17,8 @@
         </thead>
         <tbody>
             <tr ng-repeat="client in searchPaginator.currentPageItems  | filter:filterText">
-                <td><a href="#/viewclient/{{client.id}}">{{client.displayName}}</a></td>
-                <td><a href="#/viewclient/{{client.id}}">{{client.accountNo}}</a></td> 
+                <td>{{client.displayName}}</td>
+                <td>{{client.accountNo}}</td> 
                 <td>{{client.officeName}}</td>
                 <td>{{client.staffName}}</td>
             </tr>

@@ -75,4 +75,32 @@ angular.module('myApp.services', [])
 			   isArray:true
 		   }
 		}); 
+	})
+	.factory('LoanProducts', function($resource)
+	{
+		return $resource('https://demo.openmf.org/mifosng-provider/api/v1/loanproducts', {}, { 
+		   search: {
+			   method: 'GET',
+			   isArray:true
+		   }
+		}); 
+	})
+	.factory('SavingProducts', function($resource)
+	{
+		return $resource('https://demo.openmf.org/mifosng-provider/api/v1/savingsproducts', {}, { 
+		   search: {
+			   method: 'GET',
+			   isArray:true
+		   }
+		}); 
+	})
+	.factory('Charges', function($resource)
+	{
+		return $resource('https://demo.openmf.org/mifosng-provider/api/v1/charges', {}, { 
+		   search: {
+			   method: 'GET',
+			   isArray:true
+		   }
+		}); 
 	});
+	
