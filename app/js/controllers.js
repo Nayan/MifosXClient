@@ -66,4 +66,14 @@ angular.module('myApp.controllers', []).
 		   $scope.client = Clients.get({id: $routeParams.id});
 		   $scope.clientAccounts = ClientAccounts.get({id: $routeParams.id});
 		   $scope.clientNotes = ClientNotes.search({id: $routeParams.id});		
+  })
+    .controller('LoanProductCtrl', function($scope , $routeParams , LoanProducts) {
+		   $scope.loanproducts = LoanProducts.search();		
+  })
+  .controller('SavingProductCtrl', function($scope , $routeParams , SavingProducts) {
+		   $scope.savingproducts = SavingProducts.search();		
+  })
+  .controller('ChargesCtrl', function($scope , $routeParams , Charges) {
+		   $scope.charges = Charges.search();		
   });
+  	

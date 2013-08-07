@@ -10,6 +10,9 @@ angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives', 
     $routeProvider.when('/clients', {templateUrl: 'partials/clients.html', controller: 'ClientCtrl'});
     $routeProvider.when('/createclient', {templateUrl: 'partials/createClient.html', controller: 'CreateClientCtrl'});
     $routeProvider.when('/viewclient/:id', {templateUrl: 'partials/viewClient.html', controller: 'ViewClientCtrl'});
+    $routeProvider.when('/loanproducts', {templateUrl: 'partials/products/loanproduct.html', controller: 'LoanProductCtrl'});
+    $routeProvider.when('/savingproducts', {templateUrl: 'partials/products/savingproduct.html', controller: 'SavingProductCtrl'});
+    $routeProvider.when('/charges', {templateUrl: 'partials/products/charges.html', controller: 'ChargesCtrl'});
 
 	$routeProvider.when('/search/:query', {templateUrl: 'partials/search/glresults.html', controller: 'SearchCtrl'});
 
