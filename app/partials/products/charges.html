@@ -16,7 +16,7 @@
         </thead>
         <tbody>
             <tr ng-repeat="charge in charges | filter:filterText">
-                <td>{{charge.name}}</td>            
+                <td><a href="#/viewcharge/{{charge.id}}">{{charge.name}}</a></td>         
                 <td>{{charge.penalty}}</td>            
                 <td>{{charge.active}}</td>            
             </tr>

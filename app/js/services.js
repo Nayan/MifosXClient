@@ -102,5 +102,9 @@ angular.module('myApp.services', [])
 			   isArray:true
 		   }
 		}); 
-	});
+	})
+	.factory('Charge', function($resource)
+	{
+    	return $resource('https://demo.openmf.org/mifosng-provider/api/v1/charges/:id',{ id: '@id' });
+ 	});
 	
