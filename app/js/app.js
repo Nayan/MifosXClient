@@ -16,6 +16,7 @@ angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives', 
 
 	$routeProvider.when('/search/:query', {templateUrl: 'partials/search/glresults.html', controller: 'SearchCtrl'});
     $routeProvider.when('/organization', {templateUrl: 'partials/admin/organization.html', controller: 'OrganizationCtrl'});
+    $routeProvider.when('/system', {templateUrl: 'partials/admin/system.html', controller: 'SystemCtrl'});
 
     $httpProvider.defaults.headers.common['X-Mifos-Platform-TenantId'] = 'default';
     $httpProvider.defaults.headers.common['Content-Type'] = 'application/json; charset=utf-8';

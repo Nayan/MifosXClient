@@ -31,6 +31,9 @@ angular.module('myApp.controllers', []).
   .controller('OrganizationCtrl', function() {
 
   })
+  .controller('SyatemCtrl', function() {
+
+  })
   .controller('ClientCtrl', function($scope , $http , Paginator) {
 
   	  	$scope.query = 'Testing';
