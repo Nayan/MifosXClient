@@ -25,9 +25,12 @@ angular.module('myApp.controllers', []).
 					  };
 				}
 			])
-  .controller('HomeCtrl', [function() {
+  .controller('HomeCtrl', function() {
 
-  }])
+  })
+  .controller('OrganizationCtrl', function() {
+
+  })
   .controller('ClientCtrl', function($scope , $http , Paginator) {
 
   	  	$scope.query = 'Testing';
