@@ -81,5 +81,8 @@ angular.module('myApp.controllers', []).
   })
   .controller('ChargesCtrl', function($scope , $routeParams , Charges) {
 		   $scope.charges = Charges.search();		
-  });
+  })
+  .controller('ViewChargeCtrl', function($scope , $routeParams , Charge) {
+		   $scope.charge = Charge.get({id: $routeParams.id});
+   });
   	
