@@ -84,5 +84,13 @@ angular.module('myApp.controllers', []).
   })
   .controller('ViewChargeCtrl', function($scope , $routeParams , Charge) {
 		   $scope.charge = Charge.get({id: $routeParams.id});
-   });
+   })
+  .controller('TaskCtrl', function($scope , $routeParams , ClientDetatils, Loans) {
+  		ClientDetatils.get(function(data){
+			$scope.clients = data.pageItems;
+		});
+		Loans.get(function(data){
+			$scope.loans = data.pageItems;
+		});
+  });
   	

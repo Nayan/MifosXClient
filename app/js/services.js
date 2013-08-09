@@ -106,5 +106,13 @@ angular.module('myApp.services', [])
 	.factory('Charge', function($resource)
 	{
     	return $resource('https://demo.openmf.org/mifosng-provider/api/v1/charges/:id',{ id: '@id' });
+ 	})
+ 	.factory('ClientDetatils', function($resource)
+	{
+    	return $resource('https://demo.openmf.org/mifosng-provider/api/v1/clients');
+ 	})
+ 	.factory('Loans', function($resource)
+	{
+    	return $resource('https://demo.openmf.org/mifosng-provider/api/v1/loans'); 
  	});
 	
