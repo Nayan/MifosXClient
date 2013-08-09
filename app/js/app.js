@@ -14,7 +14,8 @@ angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives', 
     $routeProvider.when('/savingproducts', {templateUrl: 'partials/products/savingproduct.html', controller: 'SavingProductCtrl'});
     $routeProvider.when('/charges', {templateUrl: 'partials/products/charges.html', controller: 'ChargesCtrl'});
     $routeProvider.when('/viewcharge/:id', {templateUrl: 'partials/products/viewcharges.html', controller: 'ViewChargeCtrl'});
-    
+    $routeProvider.when('/tasks', {templateUrl: 'partials/tasks.html', controller: 'TaskCtrl'});
+
 	$routeProvider.when('/search/:query', {templateUrl: 'partials/search/glresults.html', controller: 'SearchCtrl'});
     $routeProvider.when('/organization', {templateUrl: 'partials/admin/organization.html', controller: 'OrganizationCtrl'});
     $routeProvider.when('/system', {templateUrl: 'partials/admin/system.html', controller: 'SystemCtrl'});

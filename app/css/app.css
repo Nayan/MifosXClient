@@ -33,12 +33,12 @@ accordion > div > div > div > a:focus {
   text-decoration: underline;
 }
 
-div > div > ul > li a {
+div > ul > li a {
   color : #5e565e;
 }
 
-div > div > ul > li a:hover,
-div > div > ul > li a:focus {
+div > ul > li a:hover,
+div > ul > li a:focus {
   color: #080808;
   text-decoration: underline;
 }
