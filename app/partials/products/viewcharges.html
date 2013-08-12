@@ -9,16 +9,46 @@
   </div>
 	<div class="row paddedleft">
 		<hr/>
-		<div>
-			<span>Fees name:&nbsp;{{charge.name}}</span></br>
-			<span>Currency name:&nbsp;{{charge.currency.name}}</span></br>
-			<span>Amount:&nbsp;{{charge.amount}}</span></br>
-			<span>Active:&nbsp;{{charge.active}}</span></br>
-			<span>Penalty:&nbsp;{{charge.penalty}}</span></br>
-			<span>ChargeTimeType:&nbsp;{{charge.chargeTimeType.value}}</span></br>
-			<span>ChargeAppliesTo:&nbsp;{{charge.chargeAppliesTo.value}}</span></br>
-			<span>ChargeCalculationType:&nbsp;{{charge.chargeCalculationType.value}}</span></br>
-		</div>
+		<table width="40%">
+			<tr>
+				<td>
+					<h3>{{charge.name}}</h3>
+				</td>
+				<td>
+					<div ng-switch="charge.penalty">
+					    <div ng-switch-when="false">(charge)</div>
+					    <div ng-switch-when="true">(penalty)</div>
+					</div>
+				</td>
+			<tr>
+				<td>Currency name:</td>
+				<td>{{charge.currency.name}}</td>
+			</tr>
+			<tr>
+				<td>Amount:</td>
+				<td>{{charge.amount}}</td>
+			</tr>
+			<tr>
+				<td>Active:</td>
+				<td>{{charge.active}}</td>
+			</tr>
+			<tr>
+				<td>Penalty:</td>
+				<td>{{charge.penalty}}</td>
+			</tr>
+			<tr>
+				<td>ChargeTimeType:</td>
+				<td>{{charge.chargeTimeType.value}}</td>
+			</tr>
+			<tr>
+				<td>ChargeAppliesTo:</td>
+				<td>{{charge.chargeAppliesTo.value}}</td>
+			</tr>
+			<tr>
+				<td>ChargeCalculationType:</td>
+				<td>{{charge.chargeCalculationType.value}}</td>
+			</tr>
+		</table>
 	</div>
 </div>
           
